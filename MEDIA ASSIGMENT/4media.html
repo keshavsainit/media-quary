@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+  <style>
+    .color-box{
+    
+      display: grid;
+      grid-template-columns: 1fr ;
+
+    }
+
+    .box{
+      border: solid;
+      background-color: aqua;
+      height: 150px;
+    }
+
+    .header{
+      background-color: red;
+    }
+    .slidbar{
+      background-color: green;
+    }
+    .main{
+      background-color: yellow;
+    }
+    .footer{
+      background-color: black;
+    }
+
+    @media (min-width:700px){
+      .color-box{
+        
+       grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 
+          "header header header"
+          "slidebar main main"
+          "footer footer footer"   
+        
+        ;
+      }
+    }
+  </style>
+<body>
+    
+  <div class="color-box">
+    
+    <div class="box header">1</div>
+    <div class="box slidbar">2</div>
+    <div class="box main">3</div>
+    <div class="box footer ">4</div>
+  </div>
+
+
+</body>
+</html>
